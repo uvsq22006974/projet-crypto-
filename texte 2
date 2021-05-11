@@ -1,0 +1,27 @@
+
+def dechiffrement(texte, cle):
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+                'v', 'w', 'x', 'y', 'z']  #variable alphabet
+    
+    texte_claire = [] #texte decodé
+
+    for lettre in texte:
+        if not 96 < ord(lettre)<123: 
+            texte_claire.append(lettre)   #la même boucle présente sur le texte 1
+            
+
+        else:
+            for l, k in zip(cle, alphabet):  #ICI j'ai utiliser une fonction osbcur trouver sur un forme pour parcourir de liste de meme taille avec une seule boucle for
+                if lettre == k:
+                    texte_claire.append(l)  #du coup on parcours dans la clé et a la fois dans l'alphabet pour trouver la lettre qui corréspond au message crypté puis on remplace
+                   
+                
+    return "".join(texte_claire)
+
+
+
+
+
+print(dechiffrement("gx qosvlnkd wkvlkxo xiu vscx qno yd fsu cx qniix cx unkggx kdvsddyx xu vsdukxdu g'kdckvx. gxi gxuuoxi cy fsu cx qniix qxofxuuxdu cx cxvngxo gxi gxuuoxi cy fxiinmx sokmkdng fscygs 26. ixygxi gxi gxuuoxi cx n n a isdu vlkwwoxxi.","ywdnqmlxsjihgar&p&oktcfeuz"))
+
+#les & permette les lettres manquante dans la clé car comme pas toute les lettre de l'alphabet sont présente dans le texte l'on peut pas determiner toute la clé
