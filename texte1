@@ -1,0 +1,40 @@
+def dechiffrement(texte, cle):
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+                'v', 'w', 'x', 'y', 'z'] # on retrouve la liste de l'alphabet quand on ne le  connait pas c'est plutôt pratique , c'est surout que ça sert de repert a toute la fonction 
+   
+    
+    
+    flag1= 1 #ici la variable flag1 permet de compter le positionement des lettre dans l'alphabet car malheuresement je sais pas utiliser les index donc system D
+    flag2= 0 # ici on a la variable fLag2 sa fonctionne un peux pareil mais a la différence que c'est pour trouver le positionement de la cle dans l'alphabet pour pouvoir faire le décalage 
+    
+    texte_claire = [] #petite liste qui vas contenir le texte décoder
+ 
+    for b in alphabet:   #dans cette boucles for ici on recupere la possition de la lettre de décalge pour pouvoir décaler le programe
+        flag2+=1         
+        if b ==cle:
+            chelou = flag2 #la variable chelou je sais pas pourquoi si je fais pas cette égalité mon programme fais des truc bizarre
+            flag2 = 0
+             
+    
+    for lettre in texte: #ON LIs toute le texte crypté 
+        
+        if not 96 < ord(lettre)<123:   #tout se qui n'est pas compris dans les lettre minuscule du code asci est directement mis dans la variable texte claire 
+            texte_claire.append(lettre) 
+        
+        
+        else:
+            for i in alphabet:     # ici on  recupere les lettre crypté on retrouve leur position dans l'alphabet puis on additionne a la possition de la lettre de calage 
+                flag1 +=1
+                if i == lettre:
+                    flag1=(flag1+chelou)
+                    flag1 = flag1%26  #ici on fait le modulo car les valeur sont entre 0 ET 26 donc quand le chiffre est superieur il reviens au debut de la liste
+                    print(flag1)
+                    texte_claire.append(alphabet[flag1])
+            flag1= 1 
+    
+    
+    
+    return "".join(texte_claire) #join permet de revoyer le resulat sous forme de texte 
+
+print(dechiffrement("kd oqnbgzhm ehbghdq ztqz tm bncd ozq rtarshstshnm zkogzadshptd: bgzptd kdssqd drs qdlokzbdd ozq tmd ztsqd. tshkhrdq kz eqdptdmbd cdr kdssqdr ontq cdbncdq kd ldrrzfd.",'y'))
+
