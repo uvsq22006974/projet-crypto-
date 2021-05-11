@@ -1,0 +1,42 @@
+def dechiffrement(texte, cle):
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+                'v', 'w', 'x', 'y', 'z']
+ 
+    texte_claire = []
+ 
+
+    boucle = 0
+    for lettre in texte:
+
+
+        if not 96 < ord(lettre)<123: 
+            texte_claire.append(lettre)    #petite partie pour recupérer toute les choses qui ne sont pas des lettre minuscule du code asci
+
+
+
+
+        else:         #escalier de la mort a expliquer en oral 
+            flag1=0   #les deux flag qui sont des variable pour trouver la possition des  lettres dans l'alphabet 
+            flag2=0
+            for h in alphabet:
+                flag1+=1
+                if h == lettre:
+
+                    for l in alphabet:
+                        flag2+=1
+                        if cle[boucle]==l:
+                            flag1 = flag1-1     
+                            flag2 = flag2-1
+                            
+                            chiffre =(( flag1- flag2) % 26)
+                            
+                            texte_claire.append(alphabet[chiffre])
+
+        boucle+= 1
+        if boucle == len(cle): #comme c'est un code vigenere la clé se repete donc il faut une boucle pour que la clé revienne au premier terme de celle si
+            boucle = 0
+
+    return "".join(texte_claire)
+
+
+print(dechiffrement("dceuq e n'ehfp cg p'kyhhep uqfw cgiy citudm c gzudiq ni ezhd px c jhptv ep cggsht. kg hdtymdt xdzei gdx rzyq wir mvzxpw, cifcchdb znwd ccyw wy lkcsht, dp isgd uqfw wy ?","clez"))
