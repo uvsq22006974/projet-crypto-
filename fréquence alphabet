@@ -1,0 +1,20 @@
+alphabet= []
+
+def alphabet_vide():
+    for i in range(97,123):
+        alphabet.append([chr(i),0.0])
+
+def vide():
+    for x in alphabet:
+        x[1]=0.0
+alphabet_vide()
+
+def nBrOccur(texte):
+    vide()
+    for c in texte:
+        if 97<= ord(c) <= 122:
+            alphabet[ord(c)-97][1]+= round(1/len(texte)*100,3)
+
+
+nBrOccur("dceuq e n'ehfp cg p'kyhhep uqfw cgiy citudm c gzudiq ni ezhd px c jhptv ep cggsht. kg hdtymdt xdzei gdx rzyq wir mvzxpw, cifcchdb znwd ccyw wy lkcsht, dp isgd uqfw wy ?")
+print(alphabet)
