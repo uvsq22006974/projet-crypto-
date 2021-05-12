@@ -4,7 +4,8 @@ def dechiffrement(texte, cle):
  
     texte_claire = []
     
-    texte = ["jum kfj bvzous fnvceqeqej"
+    texte = ["jum kfj bvzous fnvceqeqej".      #j'ai trouver la clé mais j'arrive pas a le programmer automatiquement j'ai décoder manuelment avec se programme
+    
              ,"ev ksquvr ymf rjfd"
              ,"trnn zwfim dtjati"
              ,"nz rpet zqbzmzrs huz pvrtmi"
