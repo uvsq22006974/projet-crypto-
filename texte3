@@ -10,7 +10,7 @@ def dechiffrement(texte, cle):
 
 
         if not 96 < ord(lettre)<123: 
-            texte_claire.append(lettre)    #petite partie pour recupérer toute les choses qui ne sont pas des lettre minuscule du code asci
+            texte_claire.append(lettre)    #petite partie pour recupérer toute les choses qui ne sont pas des lettre minuscule du code ascii
 
 
 
