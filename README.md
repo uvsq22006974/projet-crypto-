@@ -12,4 +12,5 @@ dans le texte numéro 3  c'est un code de vignere  donc j'ai utiliser la fonctio
 
 texte 4 
 dans le texte numéro 4  c'est un code de vignere  donc j'ai utiliser la fonction vue en cours pour trouver le pourcentage d'aparition de lettre avec celle de la langue française puis pour décoder en suite vue que dans l'indice  il y avait se regarder dans le miroir de plus dans la poésie crypté on remarque qu'il y a une majuscule en fin de phrase ors dans les consigne seul les lettres minuscule sont codé donc ça ma mis la puce a l'oreille apres tout ça  j'ai reussi a décoder queqlue mot a la mains mais vraiment bravez c'est pas cool comme clé car c'était pratiquement dans l'indice 3 seul" les brave" la reponse été sous mes yeux
-mais je remarquer que quand j'essayer utiliser la clé que j'avais trouver pour la ligne 1 j'ai compris que a chaque ligne la clé se décaler de 1 pour revenir au debut  voila 
+mais je remarquer que quand j'essayer utiliser la clé que j'avais trouver pour la ligne 1 j'ai compris que a chaque ligne la clé se décaler de 1 pour revenir au debut  voila  ; EN PLUS la clé du texte 3 contient un z a la fin c'etait  pas cool !!!
+
